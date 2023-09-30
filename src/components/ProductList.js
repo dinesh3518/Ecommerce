@@ -7,7 +7,7 @@ function ProductList({addToCart}) {
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [sortByPrice, setSortByPrice] = useState('');
   const [layout, setLayout] =useState(3)
-  const classname=`col-md-${layout} mb-4 d-flex flex-wrap align-items-end hover-zoom`
+  const classname=`col-md-${layout} mb-4 d-flex align-items-end`
   const handleBrandChange = (e) => {
     const brand = e.target.value;
     if (selectedBrands.includes(brand)) {
@@ -92,7 +92,7 @@ function ProductList({addToCart}) {
       <div className='row' style={{width:"80%"}}>
         {filteredProducts.map((product) => (
           <div key={product.id} className={classname}
-          style={{width:'80px',height:'400px'}}>
+          style={{width:'20rem',height:'25rem'}}>
           <div className="card">
             <img
               src={require(`../assets/images/${product.image}`)}
