@@ -68,7 +68,7 @@ function ProductList({addToCart}) {
       />
       <PriceFilter sortByPrice={sortByPrice} handleSortChange={handleSortChange} />
       </div>
-      <div className='d-flex flex-wrap' style={{width:"80%"}}>
+      <div className='row d-flex flex-wrap container' style={{width:"80%"}}>
         {filteredProducts.map((product) => {
           return <Product product={product} addToCart={addToCart} layout={layout}/>
         })}
