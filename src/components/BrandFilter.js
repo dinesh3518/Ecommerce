@@ -1,10 +1,19 @@
-import React from 'react';
+import products from './Products'
 
-function BrandFilter({ brands, selectedBrands, handleBrandChange }) {
+function BrandFilter({selectedBrands, handleBrandChange }) {
+   let brands={}
+   products.forEach((product)=>{
+    if(brands[product.brand]){
+      brands[product.brand]++
+    }
+    else{
+      brands[product.brand]=1
+    }
+  })
 
-    const sortedBrands = brands.sort();
+    const sortedBrands =Object.keys(brands).sort();
   return (
-    <div className='card'>
+    <div className='card container'  style={{backgroundColor:'#7ac32a'}}>
     <div className='card-body'>
       <h4 className='card-title'>Brands</h4>
       {sortedBrands.map((brand) => (
@@ -16,7 +25,7 @@ function BrandFilter({ brands, selectedBrands, handleBrandChange }) {
             onChange={handleBrandChange}
             className="mr-1"
           />
-          {brand}
+          {brand}({brands[brand]})
         </label>
 
       ))}
