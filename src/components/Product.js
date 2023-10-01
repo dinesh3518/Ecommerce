@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Product({product,addToCart,layout}){
 
-  const classname=`col-md-${layout} mb-4 d-flex align-items-end flex-wrap`
+  const classname=`col-md-${layout} mb-4 d-flex flex-wrap`
   const [isHover, setIsHover] = useState(false)
   const [dHover, setdHover] = useState(false)
 
