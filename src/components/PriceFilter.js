@@ -2,7 +2,7 @@ import React from 'react';
 
 function PriceFilter({ sortByPrice, handleSortChange }) {
   return (
-   <div className='card'>
+   <div className='card'  style={{backgroundColor:'#7ac32a'}}>
     <div className='card-body'>
       <h4 className='card-title'>Price</h4>
       <label className="d-block">
