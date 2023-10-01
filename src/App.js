@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import './App.css';
+//import './App.css';
 import ProductList from './components/ProductList';
 import Header from './components/Header';
 import Cart from './components/Cart'
@@ -13,9 +13,9 @@ function App() {
     setCartItems([...cartItems, product]);
   }
   return (
-    <div>
+    <div className='container-fluid'>
       <Header count={count} setVisible={setVisible}/>
-      <main className="container-fluid">
+      <main className="pt-2 border border-dark">
       {visible?<ProductList addToCart={addToCart}/> : <Cart cartItems={cartItems}/>}
       </main>
     </div>
