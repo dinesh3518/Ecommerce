@@ -4,7 +4,7 @@
 
 ### Languages
 + React js
-+ Css Bootsrtap
++ Css Bootstrap 
 
 ### Features
 + Responsive layouts
